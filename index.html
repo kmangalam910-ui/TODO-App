@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini TODO Application</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <h1 id="main-title">Mini TODO Application</h1>
+        <div class="version-pill">v2.0.0 Pro Dashboard</div>
+    </header>
+
+    <div class="grid-layout">
+        <!-- Section 1: Element Selection -->
+        <div class="container card">
+            <h2><span class="dot"></span>1. Element Selection</h2>
+            <p class="text box-style">This is paragraph 1</p>
+            <p class="text box-style" id="para">This is paragraph 2</p>
+            <p class="text box-style">This is paragraph 3</p>
+            <button class="btn btn-primary btn-full mt-auto" onclick="selectElements()">Highlight All Paragraphs</button>
+        </div>
+
+        <!-- Section 2: Creating Elements -->
+        <div class="container card">
+            <h2><span class="dot"></span>2. Creating Elements</h2>
+            <div class="flex-row">
+                <input type="text" id="item-input" class="input-white" placeholder="Enter item name...">
+                <button class="btn btn-primary" onclick="addItem(event)">Add</button>
+            </div>
+            <ol id="item-list"></ol>
+        </div>
+
+        <!-- Section 3: Modifying Content -->
+        <div class="container card">
+            <h2><span class="dot"></span>3. Modifying Content</h2>
+            <div id="content-box" class="box-style center-text tall-box">Original content here</div>
+            <div class="flex-row gap-10 mt-auto">
+                <button class="btn btn-secondary flex-1" onclick="changeContent()">Change Text</button>
+                <button class="btn btn-secondary flex-1" onclick="changeHTML()">Change HTML</button>
+            </div>
+        </div>
+
+        <!-- Section 4: Changing Styles -->
+        <div class="container card">
+            <h2><span class="dot"></span>4. Changing Styles</h2>
+            <div id="style-box" class="box-style center-text tall-box">
+                Style me!
+            </div>
+            <button class="btn btn-primary btn-full mt-auto" onclick="changeStyle()">Trigger Dynamic Styling</button>
+        </div>
+
+        <!-- Section 5: Event Handling -->
+        <div class="container card">
+            <h2><span class="dot"></span>5. Event Handling</h2>
+            <div class="flex-row justify-between mb-20">
+                <button id="event-btn" class="btn btn-primary">Click Me!</button>
+                <div id="click-count" class="box-style small-box">Clicks: 0</div>
+            </div>
+            <input type="text" id="text-input" class="input-white btn-full mt-auto" placeholder="Live mirror typing...">
+            <p id="output"></p>
+        </div>
+
+        <!-- Section 6: DOM Traversal -->
+        <div class="container card">
+            <h2><span class="dot"></span>6. DOM Traversal</h2>
+            <div id="parent" class="flex-row gap-10 mb-20">
+                <div class="child box-style flex-1 center-text">Child 1</div>
+                <div class="child box-style flex-1 center-text">Child 2</div>
+                <div class="child box-style flex-1 center-text">Child 3</div>
+            </div>
+            <button class="btn btn-primary btn-full mt-auto" onclick="traverseDOM()">Traverse & Modify</button>
+        </div>
+
+        <!-- Section 7: Attributes -->
+        <div class="container card grid-col-span">
+            <h2><span class="dot"></span>7. Working with Attributes</h2>
+            <div class="flex-row align-start gap-20">
+                <img id="demo-img" src="Assets/csr2.webp" height="120" alt="Placeholder" class="rounded-img">
+                <div class="flex-col">
+                    <p class="text-secondary mb-20">Dynamically update image sources and attributes through the DOM API.</p>
+                    <button class="btn btn-dark-blue w-fit" onclick="changeAttribute()">Switch Image Source</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
