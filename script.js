@@ -4,10 +4,10 @@ const para2 = document.getElementsByClassName("text")[1];
 const para3 = document.getElementsByClassName("text")[2];
 
 function selectElements() {
-    para1.style = "background-color: yellow; color: white; transition: all 0.3s; border-color: var(--btn-primary);";
+    para1.style = "background-color: yellow; transition: all 0.3s; border-color: var(--btn-primary);";
     para1.textContent = "I am paragraph 1";
 
-    para2.style = "background-color: var(--btn-primary); color: white; transition: all 0.3s; border-color: var(--btn-primary);";
+    para2.style = "background-color: pink; color: red; transition: all 0.3s; border-color: var(--btn-primary);";
     para2.textContent = "I am paragraph 2";
 
     para3.style = "background-color: var(--btn-primary); color: white; transition: all 0.3s; border-color: var(--btn-primary);";
